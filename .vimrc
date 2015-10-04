@@ -35,9 +35,10 @@ set matchtime=5
 set scrolloff=3
 set smartindent
 if has("autocmd")
-	autocmd FileType xml,html,tex set ts=2
-	autocmd FileType xml,html,tex set softtabstop=2
-	autocmd FileType xml,html,tex set sw=2
+	autocmd FileType xml,html,tex,ocaml set ts=2
+	autocmd FileType xml,html,tex,ocaml set softtabstop=2
+	autocmd FileType xml,html,tex,ocaml set sw=2
+	autocmd FileType xml,html,tex,ocaml set expandtab
 	autocmd FileType xml,html,c,cs,java,perl,shell,bash,cpp,python,vim,php,ruby set number
 	autocmd FileType xml,html vmap <C-o> <ESC>'<i<!--<ESC>o<ESC>'>o-->
 	autocmd FileType java,c,cpp,cs vmap <C-o> <ESC>'<o/*<ESC>'>o*/
