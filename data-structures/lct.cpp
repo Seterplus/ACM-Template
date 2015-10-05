@@ -6,9 +6,9 @@ namespace NS_LCT {
 	 *
 	 * Do / Done - Get path information from node x to node y
 	 * Ex.:
-	 * LCT::S *t = A.Do(x, y); 
+	 * LCT::S *t = A.Do(x, y);
 	 * printf("%d\n", t->ans); // get value
-	 * t->a = a; // set a mark
+	 * t->a = a; // place a mark
 	 * A.Done(t);
 	 *
 	 * Cut / Link - Dynamic operation
@@ -24,7 +24,7 @@ namespace NS_LCT {
 		} null, *pool, *t;
 
 		void InitTree(vector<int> E[], int r) {
-			//TODO: initial tree with edge set E and root r
+			//TODO: initialize tree with edge set E and root r
 			node(&null, &null, 0);
 			deque<int> Q;
 			Q.pb(r);
@@ -46,7 +46,7 @@ namespace NS_LCT {
 			x->f = f;
 			x->c[0] = x->c[1] = &null;
 			x->r = 0;
-			//TODO: initial node x with value v
+			//TODO: initialize node x with value v
 
 			return x;
 		}
@@ -154,7 +154,7 @@ namespace NS_LCT {
 			return Link(pool + x, pool + y);
 		}
 		S *Do(S *x, S *y) {
-			if (!Same(x,y))
+			if (!Same(x, y))
 				return &null;
 			Access(x);
 			S *r = splay(Access(y), &null);
